@@ -1,0 +1,15 @@
+@media screen and (max-width:576px) {
+    .banner-part {
+        height: 280px;
+    }
+
+    .card-sec {
+        flex-direction: column;
+    }
+
+    .call-history {
+        width: auto;
+    }
+    /* .em-grd{ width: 60%;}
+     */
+}
