@@ -72,7 +72,7 @@ function history() {
 
     for (const data of transactionData) {
         const div = document.createElement('div');
-        div.className = "bg-slate-100 w-[230px] p-2  flex justify-between items-center mt-4 rounded-[10px]";
+        div.className = " trans-class bg-slate-100 w-[250px] p-2  flex justify-between items-center mt-4 rounded-[10px]";
         div.innerHTML = `
         <div>
         <h3 class="font-semibold text-[14px]">${data.name}</h3>

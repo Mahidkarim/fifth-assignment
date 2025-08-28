@@ -10,5 +10,13 @@
     .call-history {
         width: auto;
     }
-    
+
+    .wight-l {
+        width: 97%;
+        padding: 3%;
+    }
+
+    .trans-class {
+        width: 98%;
+    }
 }
