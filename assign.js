@@ -211,6 +211,29 @@ document.getElementById('call-btn9').addEventListener('click', function () {
 
 
 
+// copy button section 
+
+
+
+function increaseCopy() {
+    let copyNum = parseInt(document.getElementById('copy-num').innerText)
+
+    document.getElementById('copy-num').innerText = copyNum + 1;
+
+    alert('Text Copy')
+
+
+}
+
+document.getElementById('copy-btn').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn2').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn3').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn4').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn5').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn6').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn7').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn8').addEventListener('click', increaseCopy)
+document.getElementById('copy-btn9').addEventListener('click', increaseCopy)
 
 
 
