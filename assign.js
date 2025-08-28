@@ -53,25 +53,25 @@ document.getElementById('call-btn2').addEventListener('click', function () {
     collButton('Calling Police Helpline Number 999')
 });
 document.getElementById('call-btn3').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Fire Service Helpline 999')
 });
 document.getElementById('call-btn4').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Ambulance Service 1994-999999')
 });
 document.getElementById('call-btn5').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Women & Child Helpline 109')
 });
 document.getElementById('call-btn6').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Anti-Corruption Helpline 106')
 });
 document.getElementById('call-btn7').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Electricity Helpline Number 16216')
 });
 document.getElementById('call-btn8').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Brac Helpline 16445')
 });
 document.getElementById('call-btn9').addEventListener('click', function () {
-    collButton('Hurrey your making call')
+    collButton('Calling Bangladesh Railway Helpline 163')
 });
 
 
