@@ -5,6 +5,8 @@
 
 
 
+
+
 function increaseHeart() {
     let heartNum = parseInt(document.getElementById('heart-num').innerText)
 
@@ -33,21 +35,29 @@ function collButton(message) {
 
 
 
-    if (coin < 19) {
+    if (coin < 20) {
         alert('You Do Not Have Enough Coin To Make Call')
         return;
     }
 
-    else (alert(
-        message
-    ))
+    else (alert(message))
     document.getElementById('coin-store').innerText = coin - 20;
 }
 
 
 
 document.getElementById('call-btn').addEventListener('click', function () {
-    collButton('Calling National Emergency Service 999')
+    if (collButton('Calling National Emergency Service 999')) {
+
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Bangladesh Railway Helpline ",
+            number: "163",
+            time: time
+        })
+
+        history();
+    }
 });
 document.getElementById('call-btn2').addEventListener('click', function () {
     collButton('Calling Police Helpline Number 999')
@@ -79,6 +89,137 @@ document.getElementById('call-btn9').addEventListener('click', function () {
 
 
 
+//  History Section///
+
+
+
+
+const transactionData = []
+
+function history() {
+    let callHistorys = document.getElementById('call-history')
+
+    callHistorys.innerHTML = `
+    <div class=" call-history   flex justify-between"  >
+                  <h3 class="font-bold mt-2 text-[15px]"><i class="fa-regular fa-clock"></i>Call History</h3>
+                 <button id='clear-btn' class="w-[100px] h-[40px] bg-[#00A63E] rounded-[30px] text-white">Clear</button>
+
+            </div>
+    `
+
+    for (const data of transactionData) {
+        const div = document.createElement('div');
+        div.className = "bg-slate-100 w-[230px] p-2  flex justify-between items-center mt-4 rounded-[10px]";
+        div.innerHTML = `
+        <div>
+        <h3 class="font-semibold text-[14px]">${data.name}</h3>
+        <p class=" text-[14px]">${data.number}</p>
+        </div>
+        <div class=" font-semibold text-[14px]">${data.time}</div>
+
+        `;
+        callHistorys.appendChild(div);
+    }
+
+    document.getElementById('clear-btn').addEventListener('click', function () {
+        transactionData.length = 0;
+        history();
+    })
+
+}
+
+//  Button Click
+
+document.getElementById('call-btn').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "National Emergency Number",
+        number: "999",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn2').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Police Helpline Number",
+        number: "999",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn3').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Fire Service Number",
+        number: "999",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn4').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Ambulance Service",
+        number: "1994-999999",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn5').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Women & Child Helpline",
+        number: "109",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn6').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Anti-Corruption Helpline",
+        number: "106",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn7').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Electricity Helpline",
+        number: "16216",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn8').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Brac Helpline",
+        number: "16445",
+        time: time
+    })
+
+    history();
+})
+document.getElementById('call-btn9').addEventListener('click', function () {
+    const time = new Date().toLocaleTimeString();
+    transactionData.push({
+        name: "Bangladesh Railway Helpline ",
+        number: "163",
+        time: time
+    })
+
+    history();
+})
 
 
 
@@ -97,23 +238,41 @@ document.getElementById('call-btn9').addEventListener('click', function () {
 
 
 
-// document.getElementById('call-btn2').addEventListener('click', collButton)
-// document.getElementById('call-btn3').addEventListener('click', collButton)
-// document.getElementById('call-btn4').addEventListener('click', collButton)
-// document.getElementById('call-btn5').addEventListener('click', collButton)
-// document.getElementById('call-btn6').addEventListener('click', collButton)
-// document.getElementById('call-btn7').addEventListener('click', collButton)
-// document.getElementById('call-btn8').addEventListener('click', collButton)
-// document.getElementById('call-btn9').addEventListener('click', collButton)
 
 
 
 
 
-//  clicking a card's Call Button, following actions will happen:
-// Show an alert with a message including the service name and number
-// Each call will cut 20 coins. Reduce Coin after each click.
-// If coins are less than 20, show a relevant alert and terminate the process.
-// Add this service into the Call History section with:
-// Service name
-// Service number
+
+
+
+
+
+
+
+
+
+// // document.getElementById('call-history').innerHTML = oi j
+// for (const data of transactionData) {
+//     const div = document.getElementById('div')
+//     div.innerHTML = `
+//         <div
+//                 class=" bg-slate-100 w-[220px] p-2  flex justify-between items-center mt-4 rounded-[10px]">
+//                 <div class=" ">
+//                     <h3 class=" font-semibold text-[14px]">Fire Service Number</h3>
+//                     <p class=" text-[14px]">999</p>
+//                 </div>
+//                 <div class=" font-semibold text-[14px]">Time</div>
+//             </div>
+//             `
+//     transactionData.appendChild(div)
+// }
+// document.getElementById('call-history').innerText = transactionData
+
+
+
+
+
+
+
+
