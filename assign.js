@@ -37,52 +37,15 @@ function collButton(message) {
 
     if (coin < 20) {
         alert('You Do Not Have Enough Coin To Make Call')
-        return;
+        return false;
     }
 
     else (alert(message))
     document.getElementById('coin-store').innerText = coin - 20;
+    return true;
 }
 
 
-
-document.getElementById('call-btn').addEventListener('click', function () {
-    if (collButton('Calling National Emergency Service 999')) {
-
-        const time = new Date().toLocaleTimeString();
-        transactionData.push({
-            name: "Bangladesh Railway Helpline ",
-            number: "163",
-            time: time
-        })
-
-        history();
-    }
-});
-document.getElementById('call-btn2').addEventListener('click', function () {
-    collButton('Calling Police Helpline Number 999')
-});
-document.getElementById('call-btn3').addEventListener('click', function () {
-    collButton('Calling Fire Service Helpline 999')
-});
-document.getElementById('call-btn4').addEventListener('click', function () {
-    collButton('Calling Ambulance Service 1994-999999')
-});
-document.getElementById('call-btn5').addEventListener('click', function () {
-    collButton('Calling Women & Child Helpline 109')
-});
-document.getElementById('call-btn6').addEventListener('click', function () {
-    collButton('Calling Anti-Corruption Helpline 106')
-});
-document.getElementById('call-btn7').addEventListener('click', function () {
-    collButton('Calling Electricity Helpline Number 16216')
-});
-document.getElementById('call-btn8').addEventListener('click', function () {
-    collButton('Calling Brac Helpline 16445')
-});
-document.getElementById('call-btn9').addEventListener('click', function () {
-    collButton('Calling Bangladesh Railway Helpline 163')
-});
 
 
 
@@ -131,143 +94,120 @@ function history() {
 //  Button Click
 
 document.getElementById('call-btn').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "National Emergency Number",
-        number: "999",
-        time: time
-    })
+    if (collButton('Calling National Emergency Service 999')) {
 
-    history();
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "National Emergency Number",
+            number: "999",
+            time: time
+        })
+
+        history();
+    }
 })
+
+
+
+
 document.getElementById('call-btn2').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Police Helpline Number",
-        number: "999",
-        time: time
-    })
+    if (collButton('Calling Police Helpline Number 999')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Police Helpline Number",
+            number: "999",
+            time: time
+        }
+        )
+    }
 
     history();
 })
 document.getElementById('call-btn3').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Fire Service Number",
-        number: "999",
-        time: time
-    })
+    if (collButton('Calling Fire Service Helpline 999')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Fire Service Number",
+            number: "999",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn4').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Ambulance Service",
-        number: "1994-999999",
-        time: time
-    })
+    if (collButton('Calling Ambulance Service 1994-999999')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Ambulance Service",
+            number: "1994-999999",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn5').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Women & Child Helpline",
-        number: "109",
-        time: time
-    })
+    if (collButton('Calling Women & Child Helpline 109')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Women & Child Helpline",
+            number: "109",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn6').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Anti-Corruption Helpline",
-        number: "106",
-        time: time
-    })
+    if (collButton('Calling Anti-Corruption Helpline 106')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Anti-Corruption Helpline",
+            number: "106",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn7').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Electricity Helpline",
-        number: "16216",
-        time: time
-    })
+    if (collButton('Calling Electricity Helpline Number 16216')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Electricity Helpline",
+            number: "16216",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn8').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Brac Helpline",
-        number: "16445",
-        time: time
-    })
+    if (collButton('Calling Brac Helpline 16445')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Brac Helpline",
+            number: "16445",
+            time: time
+        })
+    }
 
     history();
 })
 document.getElementById('call-btn9').addEventListener('click', function () {
-    const time = new Date().toLocaleTimeString();
-    transactionData.push({
-        name: "Bangladesh Railway Helpline ",
-        number: "163",
-        time: time
-    })
+    if (collButton('Calling Bangladesh Railway Helpline 163')) {
+        const time = new Date().toLocaleTimeString();
+        transactionData.push({
+            name: "Bangladesh Railway Helpline ",
+            number: "163",
+            time: time
+        })
+    }
 
     history();
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // document.getElementById('call-history').innerHTML = oi j
-// for (const data of transactionData) {
-//     const div = document.getElementById('div')
-//     div.innerHTML = `
-//         <div
-//                 class=" bg-slate-100 w-[220px] p-2  flex justify-between items-center mt-4 rounded-[10px]">
-//                 <div class=" ">
-//                     <h3 class=" font-semibold text-[14px]">Fire Service Number</h3>
-//                     <p class=" text-[14px]">999</p>
-//                 </div>
-//                 <div class=" font-semibold text-[14px]">Time</div>
-//             </div>
-//             `
-//     transactionData.appendChild(div)
-// }
-// document.getElementById('call-history').innerText = transactionData
 
 
 
