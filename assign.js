@@ -220,7 +220,7 @@ function increaseCopy() {
 
     document.getElementById('copy-num').innerText = copyNum + 1;
 
-    alert('Text Copy')
+    // alert('Text Copy')
 
 
 }
@@ -239,3 +239,48 @@ document.getElementById('copy-btn9').addEventListener('click', increaseCopy)
 
 
 
+
+
+
+
+// to copy the text   ///
+
+async function copyTextToClipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("কপি হয়েছে: " + text);
+    } catch (err) {
+
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        // document.execCommand("copy");
+        document.body.removeChild(ta);
+        alert("কপি হয়েছে (fallback): " + text);
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const copyButtons = document.querySelectorAll('[id^="copy-btn"], .copy-btn');
+
+    copyButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const card = btn.closest(".bg-white") || btn.closest(".card");
+            if (!card) {
+                alert("কার্ড খুঁজে পাওয়া যায়নি!");
+                return;
+            }
+
+            const numberEl = card.querySelector("h2");
+            if (!numberEl) {
+                alert("নাম্বার পাওয়া যায়নি!");
+                return;
+            }
+
+            const number = numberEl.innerText.trim();
+            copyTextToClipboard(number);
+        });
+    });
+});
