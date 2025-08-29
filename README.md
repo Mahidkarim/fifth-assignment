@@ -1,8 +1,8 @@
 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
- One element is chosen by its unique ID using getElementById().
+ getElementById  ----  One element is chosen by its unique ID using getElementById().
 
- Multiples are selected by class (live HTMLCollection) using getElementsByClassName().
+ getElementsByClassName ----  Multiples are selected by class (live HTMLCollection) using getElementsByClassName().
 
  querySelector() → CSS selector for first match.
 
@@ -12,7 +12,7 @@
 
  2. How do you create and insert a new element into the DOM?
 
- To create an element, use document.createElement('tag').
+ --To create an element, use document.createElement('tag').
 
  Use insertBefore(), prepend(), or appendChild() to insert it.
 
