@@ -238,28 +238,24 @@ document.getElementById('copy-btn9').addEventListener('click', increaseCopy)
 
 
 
-
-
-
-
-
 // to copy the text   ///
 
-async function copyTextToClipboard(text) {
-    try {
-        await navigator.clipboard.writeText(text);
-        alert("কপি হয়েছে: " + text);
-    } catch (err) {
 
+function copyTextToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+        alert("কপি হয়েছে: " + text);
+    } else {
         const ta = document.createElement("textarea");
         ta.value = text;
         document.body.appendChild(ta);
         ta.select();
-        // document.execCommand("copy");
+        document.execCommand("copy");
         document.body.removeChild(ta);
         alert("কপি হয়েছে (fallback): " + text);
     }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
